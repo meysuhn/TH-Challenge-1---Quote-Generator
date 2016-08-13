@@ -46,17 +46,11 @@ var quotesArray = [
     year: "Used repeatedly over the period 1978-2010",
     type: "Category: Science Fiction Expletive",
   },
+  {
+    quote: prompt("Please say something original, profound and preferably humerous"),
+    source: prompt("What is your name?"),
+    year: new Date().getFullYear(), //is date() what they call an 'anonymous function'?
+    type: "Category: This quote may not stand the test of time...",
+  },
 
 ];
-
-/*
-Taken out of the array whilst de-bugging other stuff to stop pop ups doing people's head in.
-Will go back in for final version.
-
-{
-  quote: prompt("Please say something original, profound and preferably humerous"),
-  source: prompt("What is your name?"),
-  year: new Date().getFullYear(), //is date() what they call an 'anonymous function'?
-  type: "Category: This quote may not stand the test of time...",
-},
-*/
