@@ -1,11 +1,13 @@
 window.onload = printQuote; //this ensures a quote is displayed when page first loads.
+var coloursArray = ['#304D6D','#36b55c','#4A9586','#5F4BB6', '#CE5374', '#4E3D42', '#86A5D9', '#E06D06']; //for some reason if the coloursArray is placed inside the random_col() varaible the //function doesn't behave properly. Haven't figured why...Ask the community later...
+
 var displayedQuote = ''; //holds the HTML string to display to page.
 
 var shownColours = []; //part of random_col function
 
 var shownQuotes = []; // part of getRandomQuote function
 
-var coloursArray = ['#304D6D','#36b55c','#4A9586','#5F4BB6', '#CE5374', '#4E3D42', '#86A5D9', '#E06D06']; //for some reason if the coloursArray is placed inside the random_col() varaible the //function doesn't behave properly. Haven't figured why...Ask the community later...
+var timer; //for the setInterval
 
 function random_col() { //changes the background colour of the body
     var randomColour = Math.floor((Math.random() * (coloursArray.length)));
@@ -55,17 +57,13 @@ function printQuote() {
 
 document.getElementById('loadQuote').addEventListener("click", goGoGo, false); //starts code off once button is clicked.
 
-//A description of the goGoGo function below:
-//Interval starts only once the button is clicked
-//On button click, loads a new quote
-//THE PROBLEM: When the button is clicked the quote changes, but the timer is not reset, meaning the new quote may only appear very briefly
-//Any pointers greatly appreciated!
 
+function goGoGo(){
+    if(timer) {
+        clearInterval(timer);
+        } //Checking if a timer exists. If it does, we want to clear it
 
-function goGoGo() {
     printQuote();
-    var timer = setInterval;
-    setInterval(printQuote, 5000); //set at 5000 for testing purposes.
-    clearInterval(timer);
-    timer = 0;
+
+    timer = setInterval(printQuote, 10000); // Now we set a fresh timer and hold on to it as a global variable
 }
