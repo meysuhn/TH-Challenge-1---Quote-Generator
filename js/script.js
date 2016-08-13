@@ -1,5 +1,5 @@
 window.onload = printQuote; //this ensures a quote is displayed when page first loads.
-var coloursArray = ['#304D6D','#36b55c','#4A9586','#5F4BB6', '#CE5374', '#4E3D42', '#86A5D9', '#E06D06']; //for some reason if the coloursArray is placed inside the random_col() variable the function doesn't behave properly. Haven't figured why...Ask the community later...
+var coloursArray = ['#304D6D','#36b55c','#4A9586','#5F4BB6', '#CE5374', '#4E3D42', '#86A5D9', '#E06D06']; //for some reason if the coloursArray is placed inside the random_col() function the function doesn't behave properly. Haven't figured why...Ask the community later...
 
 var displayedQuote = ''; //holds the HTML string to display to page.
 
