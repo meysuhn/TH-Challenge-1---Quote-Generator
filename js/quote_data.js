@@ -43,13 +43,13 @@ var quotesArray = [
     quote: "Frak!",
     source: "Various Characters",
     citation: "Battlestar Galactica",
-    year: "Used repeatedly over the period 1978-2010",
+    year: "1978-2010",
     type: "Category: Science Fiction Expletive",
   },
   {
     quote: prompt("Please say something original, profound and preferably humerous"),
     source: prompt("What is your name?"),
-    year: new Date().getFullYear(), //is date() what they call an 'anonymous function'?
+    year: new Date().getFullYear(),
     type: "Category: This quote may not stand the test of time...",
   },
 
